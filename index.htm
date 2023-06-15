@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disco - MohamadReza Sadaty</title>
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <!-------- Start Header -------->
+            <input type="radio" name="pagesLBL" id="homeRadio" checked>
+            <input type="radio" name="pagesLBL" id="libraryRadio" >
+            <input type="radio" name="pagesLBL" id="likedRadio" >
+            <header class="col-md-2 justify-content-center d-flex flex-column px-0">
+                <img src="./img/Icons/Logo.svg" alt="Logo">
+                <label for="homeRadio" id="homeLBL" class="row align-items-center">
+                    <div class="col-2"><img src="./img/Icons/fe_home.svg" class="check" alt="home"><img src="./img/Icons/home.svg" class="Uncheck" alt="home"></div>
+                    <div class="col-10">home</div>
+                </label>
+                <label for="libraryRadio" id="libraryLBL" class="row align-items-center">
+                    <div class="col-2"><img src="./img/Icons/icon-park-outline_folder-music-one.svg" class="check" alt="Music Library"><img src="./img/Icons/Music Library.svg" class="Uncheck" alt="Music Library"></div>
+                    <div class="col-10">Your Library</div>
+                </label>
+                <label for="likedRadio" id="likedLBL" class="row align-items-center">
+                    <div class="col-2"><img src="./img/Icons/feather_headphones.svg" class="check" alt="Liked Songs"><img src="./img/Icons/feather_headphone.svg" class="Uncheck" alt="Liked Songs"></div>
+                    <div class="col-10">Liked Songs</div>
+                </label>
+                <button class="btn btn-primary btn-sm  row rounded-pill w-100 creat-playList-btn my-1 mx-auto align-items-center gap-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <div class="col-1"><img src="./img/Icons/Creat PlayList.svg" width="28px" height="28px" alt="Creat PlayList"></div>
+                    <div class="col-10">Create Playlist</div>
+                </button>
+                <ul class="disco-menu">
+                    <li class="disco-menu-item align-items-center"> Your Top Song 2022</li>
+                    <li class="disco-menu-item">Cover Hits 2022</li>
+                    <li class="row disco-menu-item JazzVibes align-items-center gap-2">
+                        <div class="col-2"><img src="./img/Icons/icon-park-outline_headphone-sound.svg" width="20px" height="20px" alt="Jazz Vibes"></div>
+                        <div class="col-9">Jazz Vibes</div>
+                    </li>
+                    <li class="disco-menu-item">Anime Hits</li>
+                    <li class="disco-menu-item">Best Gaming Music</li>
+                    <li class="disco-menu-item">KPop: Girls!</li>
+                </ul>
+                <div id="musiPlayer">
+                    <div class="cover-song">
+                        <div class="button-handler row align-items-center flex-nowrap gap-2 justify-content-center px-2">
+                            <img src="./img/Icons/shuffle.svg" class="width-16" alt="shuffle">
+                            <img src="./img/Icons/play-prev.svg" class="width-32" alt="prev">
+                            <img src="./img/Icons/play.svg" class="width-44" alt="play">
+                            <img src="./img/Icons/play-next.svg" class="width-32" alt="next">
+                            <img src="./img/Icons/repeat.svg" class="width-16" alt="repeat">
+                        </div>
+                    </div>
+                    <div class="row justify-content-between align-items-center py-2">
+                        <div class="col-5">
+                            <p id="songName">songName</p>
+                            <p id="artistName">artistName</p>
+                        </div>
+                        <div class="col-5 row align-items-center gap-2">
+                            <img src="./img/Icons/AirPlay.svg" class="width-22"  alt="AirPlay">
+                            <svg  class="width-22" id="likeBTN" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_d_54_104)"><path d="M17.3667 2.84166C16.941 2.41583 16.4357 2.07803 15.8795 1.84757C15.3232 1.6171 14.7271 1.49847 14.125 1.49847C13.5229 1.49847 12.9268 1.6171 12.3705 1.84757C11.8143 2.07803 11.309 2.41583 10.8833 2.84166L10 3.725L9.11666 2.84166C8.25692 1.98192 7.09086 1.49892 5.875 1.49892C4.65914 1.49892 3.49307 1.98192 2.63333 2.84166C1.77359 3.70141 1.29059 4.86747 1.29059 6.08333C1.29059 7.29919 1.77359 8.46525 2.63333 9.325L3.51666 10.2083L10 16.6917L16.4833 10.2083L17.3667 9.325C17.7925 8.89937 18.1303 8.39401 18.3608 7.83779C18.5912 7.28158 18.7099 6.6854 18.7099 6.08333C18.7099 5.48126 18.5912 4.88508 18.3608 4.32887C18.1303 3.77265 17.7925 3.26729 17.3667 2.84166V2.84166Z" stroke="#1BF869" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"/></g><defs><filter id="filter0_d_54_104" x="-3.20941" y="0.998474" width="26.4193" height="24.1932" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="4"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_54_104"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_54_104" result="shape"/></filter></defs></svg>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-------- End Header -------->
+
+            <main class="col-md-10">
+                <!-------- Start Main Header -------->
+                <div class="main-header row gap-2 justify-content-between">
+                    <div class="search-box col-7" >
+                        <i class="bi bi-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search">
+                    </div>
+                    <button class="btn btn-primary btn-sm rounded-pill upgrade col-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">UPGRADE</button>
+                    <div class="account-section col-3 row align-items-center rounded-pill mx-2 gap-2 px-1" >
+                        <img src="./img/account.jpg" class="width-32 p-0 rounded-pill" alt="account">
+                        <p class="w-auto my-0 p-0">MohamadReza Sadaty</p>
+                        <i class="bi bi-chevron-down width-16 p-0"></i>
+                    </div>
+                </div>
+                <!-------- End Main Header -------->
+                <div id="homePage"></div>
+            </main>
+            <!-------- end main -------->
+        </div>
+    </div>
+</body>
+</html>

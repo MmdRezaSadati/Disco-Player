@@ -1,0 +1,128 @@
+body{
+    background-color: #000;
+}
+header{
+    background-color: #2b2b2b;
+    color: #fff;
+    border-radius: 0 0 15px 0;
+    border-bottom: 3px #1ED760 solid;
+    font-family: 'Catamaran';
+}
+header >img{
+    margin: 11px 0;
+    width: 176px;
+}
+#homeLBL .check , #libraryLBL .check , #likedLBL .check{display: none;}
+#homeLBL .Uncheck , #libraryLBL .Uncheck , #likedLBL .Uncheck{display: block;}
+header > label{
+    margin: 6px 0;
+}
+#homeRadio , #libraryRadio ,#likedRadio{display: none;}
+#homeRadio:checked ~ header label#homeLBL img.check{
+    display: block;
+}
+#homeRadio:checked ~ header label#homeLBL img.Uncheck{
+    display: none;
+}
+#libraryRadio:checked ~ header label#libraryLBL img.check{
+    display: block;
+}
+#libraryRadio:checked ~ header label#libraryLBL img.Uncheck{
+    display: none;
+}
+#likedRadio:checked ~ header label#likedLBL img.check{
+    display: block;
+}
+#likedRadio:checked ~ header label#likedLBL img.Uncheck{
+    display: none;
+}
+.creat-playList-btn{
+    background: linear-gradient(180deg, #1ED760 0%, #14612F 100%);
+    border: 0 none;
+}
+.disco-menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 16px;
+    overflow-y: auto;
+    height: 195px;
+}
+.disco-menu li:hover{
+    text-decoration: underline;
+}
+.disco-menu li{
+    cursor: pointer;
+    margin: 7px 0;
+}
+.disco-menu li.JazzVibes{
+    font-weight: 600;
+    color: #1BF869;
+}
+.width-16{width: 16px;height: 16px;padding: 0;}
+.width-22{width: 22px;height: 22px;padding: 0;}
+.width-32{width: 32px;height: 32px;padding: 0;}
+.width-44{width: 44px;height: 44px;padding: 0;}
+.cover-song{
+    width: 208px;
+    height: 208px;
+    background: url("../img/Icons/play\ Button.png")no-repeat 50% 50%  , #666666 ;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: -10px;
+}
+#songName{
+    margin: 2px;
+    font-size: 20px;
+    font-weight: 500;
+}
+#artistName{
+    margin: 0;
+    font-size: 12px;
+}
+.button-handler{
+    padding-bottom: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 12px;
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0.3) 58.89%, #000000 90.14%) ;
+}
+/****** end Header ******/
+/****** start MainHeader ******/
+.main-header{
+    background-color:#098335;
+    padding: 24px 16px;
+}
+.search-box{
+    color: #6B6B6B;
+    overflow: hidden;
+    position: relative;
+    background-color: #2A2A2A;
+    padding: 6px 12px;
+    border-radius: 24px;
+}
+#searchInput{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+    color: #6B6B6B;
+    border: 0 none;
+    background: transparent;
+    top: 0;
+    left: 0;
+}
+.upgrade.btn{
+    width: 119px;
+    text-align: center;
+    background: #054F20;
+    border: 1px solid #1BF869;
+}
+.account-section {
+    color: #fff;
+    background: #054F20;
+}
