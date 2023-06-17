@@ -1,4 +1,5 @@
 body{
+    font-family: 'Catamaran';
     background-color: #000;
 }
 header{
@@ -76,12 +77,14 @@ header > label{
 }
 #songName{
     margin: 2px;
-    font-size: 20px;
+    font-size: 18px;
+    width: 140px;
     font-weight: 500;
 }
 #artistName{
     margin: 0;
     font-size: 12px;
+    white-space: nowrap;
 }
 .button-handler{
     padding-bottom: 5px;
@@ -90,9 +93,12 @@ header > label{
     width: 100%;
     left: 12px;
     background:linear-gradient(180deg, rgba(0, 0, 0, 0.3) 58.89%, #000000 90.14%) ;
-}
+} 
+#PlayPause{cursor: pointer;}
 /****** end Header ******/
 /****** start MainHeader ******/
+main{
+}
 .main-header{
     background-color:#098335;
     padding: 24px 16px;
@@ -125,4 +131,47 @@ header > label{
 .account-section {
     color: #fff;
     background: #054F20;
+}
+.sliderTitle{
+    color: #fff;
+    font-size: 32px;
+    font-family: 'Catamaran';
+}
+.seeAll{
+    color: #1BF869;
+    font-size: 16px;
+    cursor: pointer;
+}
+.owl-carousel .item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 16px 32px;
+    cursor: pointer;
+    width: 200px;
+    height: 348px;
+    background: url(../img/playList/Cover03.png)no-repeat ,linear-gradient(0deg, rgba(54, 54, 54, 0.75), rgba(54, 54, 54, 0.75));
+    background-blend-mode: luminosity, normal;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(40.7742px);
+    border-radius: 8px;
+}
+.owl-carousel .item img{
+    width: 170px;
+    border-radius: 8px;
+}
+.songName{
+    font-weight: 600;
+    text-shadow: 0 0 10px #00000055;
+    color: #fff;
+    font-size: 20px;
+}
+
+.artistName{
+    font-style: normal;
+    text-shadow: 0 0 10px #00000055;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #fff;
 }

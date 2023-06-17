@@ -6,6 +6,7 @@
     <title>Disco - MohamadReza Sadaty</title>
     <link rel="stylesheet" href="./style/bootstrap.min.css">
     <link rel="stylesheet" href="./style/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style/owl.carousel.min.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/responsive.css">
 </head>
@@ -17,7 +18,8 @@
             <input type="radio" name="pagesLBL" id="homeRadio" checked>
             <input type="radio" name="pagesLBL" id="libraryRadio" >
             <input type="radio" name="pagesLBL" id="likedRadio" >
-            <header class="col-md-2 justify-content-center d-flex flex-column px-0">
+            
+            <header class="col-lg-2 justify-content-center d-flex flex-column px-1">
                 <img src="./img/Icons/Logo.svg" alt="Logo">
                 <label for="homeRadio" id="homeLBL" class="row align-items-center">
                     <div class="col-2"><img src="./img/Icons/fe_home.svg" class="check" alt="home"><img src="./img/Icons/home.svg" class="Uncheck" alt="home"></div>
@@ -46,18 +48,19 @@
                     <li class="disco-menu-item">Best Gaming Music</li>
                     <li class="disco-menu-item">KPop: Girls!</li>
                 </ul>
-                <div id="musiPlayer">
+                <div id="musicPlayer">
                     <div class="cover-song">
                         <div class="button-handler row align-items-center flex-nowrap gap-2 justify-content-center px-2">
+                            <audio src="#" id="MusiPlayer"></audio>
                             <img src="./img/Icons/shuffle.svg" class="width-16" alt="shuffle">
                             <img src="./img/Icons/play-prev.svg" class="width-32" alt="prev">
-                            <img src="./img/Icons/play.svg" class="width-44" alt="play">
+                            <img src="./img/Icons/play.svg" class="width-44" id="PlayPause" alt="PlayPause button" onclick="playButton()" >
                             <img src="./img/Icons/play-next.svg" class="width-32" alt="next">
                             <img src="./img/Icons/repeat.svg" class="width-16" alt="repeat">
                         </div>
                     </div>
                     <div class="row justify-content-between align-items-center py-2">
-                        <div class="col-5">
+                        <div class="col-8">
                             <p id="songName">songName</p>
                             <p id="artistName">artistName</p>
                         </div>
@@ -70,25 +73,68 @@
             </header>
             <!-------- End Header -------->
 
-            <main class="col-md-10">
+            <main class="col-lg-10">
                 <!-------- Start Main Header -------->
                 <div class="main-header row gap-2 justify-content-between">
-                    <div class="search-box col-7" >
+                    <div class="search-box col-md-7" >
                         <i class="bi bi-search"></i>
-                        <input type="text" id="searchInput" placeholder="Search">
+                        <input type="text" id="searchInput" placeholder="Search" onkeyup="searchAjax()">
                     </div>
-                    <button class="btn btn-primary btn-sm rounded-pill upgrade col-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">UPGRADE</button>
-                    <div class="account-section col-3 row align-items-center rounded-pill mx-2 gap-2 px-1" >
+                    <button class="btn btn-primary btn-sm rounded-pill upgrade col-md-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">UPGRADE</button>
+                    <div class="account-section col-md-3 row align-items-center rounded-pill mx-2 gap-2 px-1" >
                         <img src="./img/account.jpg" class="width-32 p-0 rounded-pill" alt="account">
                         <p class="w-auto my-0 p-0">MohamadReza Sadaty</p>
                         <i class="bi bi-chevron-down width-16 p-0"></i>
                     </div>
                 </div>
                 <!-------- End Main Header -------->
-                <div id="homePage"></div>
+                <div class="row px-2">
+                    <div id="homePage" class="col-md-9 px-0">
+                        <div class="row align-items-center my-4 px-2">
+                            <div class="col-11"><h2 class="sliderTitle">Hot Today</h2></div>
+                            <div class="col-1 text-nowrap"> <p class="seeAll">See All</p></div>
+                        </div>
+                        <div class="owl-carousel owl-theme" style="display: block;" id="carousel">
+                        </div>
+                    </div>
+
+
+                    <div class="sideBar col-md-3">
+
+                    </div>
+                </div>
             </main>
             <!-------- end main -------->
         </div>
     </div>
+    <script src="./script/bootstrap.min.js"></script>
+    <script src="./script/jquery-3.2.1.min.js"></script>
+    <script src="./script/owl.carousel.min.js"></script>
+    <script src="./script/DataBase.js"></script>
+    <script src="./script/searchAjax.js"></script>
+    <script src="./script/importData.js"></script>
+    <script src="./script/playMusic.js"></script>
+    <script>
+        jQuery('.owl-carousel').owlCarousel({
+            ltr:true,
+            loop:true,
+            margin:20,
+            autoplay:true,
+            autoplayTimeout:3000,
+            autoplayHoverPause:true,
+            nav:false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:4
+                }
+            }
+        })
+    </script>
 </body>
 </html>
