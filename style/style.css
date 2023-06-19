@@ -1,12 +1,14 @@
 body{
     font-family: 'Catamaran';
-    background-color: #000;
+    background-color: #232326;
 }
 header{
     background-color: #2b2b2b;
     color: #fff;
     border-radius: 0 0 15px 0;
     border-bottom: 3px #1ED760 solid;
+    position: sticky;
+    top: -376px;
     font-family: 'Catamaran';
 }
 header >img{
@@ -15,9 +17,8 @@ header >img{
 }
 #homeLBL .check , #libraryLBL .check , #likedLBL .check{display: none;}
 #homeLBL .Uncheck , #libraryLBL .Uncheck , #likedLBL .Uncheck{display: block;}
-header > label{
-    margin: 6px 0;
-}
+header  label > div {cursor: pointer;}
+header .collapse .navbar-nav .nav-item a{padding: 3px 0;}
 #homeRadio , #libraryRadio ,#likedRadio{display: none;}
 #homeRadio:checked ~ header label#homeLBL img.check{
     display: block;
@@ -66,7 +67,7 @@ header > label{
 .width-32{width: 32px;height: 32px;padding: 0;}
 .width-44{width: 44px;height: 44px;padding: 0;}
 .cover-song{
-    width: 208px;
+    width: 100%;
     height: 208px;
     background: url("../img/Icons/play\ Button.png")no-repeat 50% 50%  , #666666 ;
     background-size: cover;
@@ -142,19 +143,21 @@ main{
     font-size: 16px;
     cursor: pointer;
 }
-.owl-carousel .item{
+.owl-carousel .item-music{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 16px 16px 32px;
+    background-size: 180% !important;
     cursor: pointer;
     width: 200px;
-    height: 348px;
+    height: 300px;
     background: url(../img/playList/Cover03.png)no-repeat ,linear-gradient(0deg, rgba(54, 54, 54, 0.75), rgba(54, 54, 54, 0.75));
     background-blend-mode: luminosity, normal;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(40.7742px);
     border-radius: 8px;
+    margin: 0.5rem 1rem;
 }
 .owl-carousel .item img{
     width: 170px;
@@ -164,7 +167,7 @@ main{
     font-weight: 600;
     text-shadow: 0 0 10px #00000055;
     color: #fff;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .artistName{
@@ -174,4 +177,30 @@ main{
     font-size: 14px;
     line-height: 140%;
     color: #fff;
+}
+
+
+.owl-carousel .item-banner > div{
+    display: flex;
+    flex-flow: column;
+}
+.owl-carousel .item-banner{
+    display: flex;
+    border-radius: 8px;
+    background-blend-mode: luminosity, normal;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(40.7742px);
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    gap: 24px;
+    background-size: 110% !important;
+    width: 504px;
+    height: 199px;
+}
+.bannerCaption{
+    font-weight: 400;
+    font-size: 14px;
+    line-height:20px;
+    color: #B6B6B6;
 }
