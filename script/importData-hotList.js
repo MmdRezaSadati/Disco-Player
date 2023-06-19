@@ -1,4 +1,4 @@
-var hotList = document.querySelector(".hot-list")
+var hotList = document.querySelector(".hot-list");
 function creaHotItem(jsonDataMusic){
     var hotItem =document.createElement("div");
     hotItem.className= "hot-item rounded-pill";
