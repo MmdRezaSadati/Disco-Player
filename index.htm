@@ -114,7 +114,7 @@
                 </div>
                 <!-------- End Main Header -------->
                 <div class="row px-2">
-                    <div id="homePage" class="col-md-9 px-0">
+                    <div id="homePage" class="col-sm-9">
                         <div class="row align-items-center my-3 px-2">
                             <div class="col-11"><h2 class="sliderTitle">Hot Today</h2></div>
                             <div class="col-1 text-nowrap"> <p class="seeAll">See All</p></div>
@@ -139,8 +139,10 @@
                     </div>
 
 
-                    <div class="sideBar col-md-3">
-
+                    <div class="sideBar col-sm-3 py-3">
+                        <h4>Hot Musics</h4>
+                        <div class="hot-list">
+                        </div>
                     </div>
                 </div>
             </main>
@@ -154,6 +156,7 @@
     <script src="./script/searchAjax.js"></script>
     <script src="./script/importData-bannerSlider.js"></script>
     <script src="./script/importData-hotSlider.js"></script>
+    <script src="./script/importData-hotList.js"></script>
     <script src="./script/playMusic.js"></script>
     <script>
         jQuery('.owl-carousel1').owlCarousel({
@@ -189,7 +192,7 @@
             responsive:{
                 360:{
                     items:1,
-                    margin:210
+                    margin:180
                 },
                 800:{
                     items:1,
