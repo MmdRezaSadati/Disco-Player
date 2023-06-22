@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="./style/bootstrap.min.css">
     <link rel="stylesheet" href="./style/bootstrap-icons.css">
     <link rel="stylesheet" href="./style/owl.carousel.min.css">
-    <link rel="stylesheet" href="./style/style.css">
+    <!-- <link rel="stylesheet" href="./style/style.css"> -->
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/main - homePage.css">
+    <link rel="stylesheet" href="./style/sideBar.css">
+    <link rel="stylesheet" href="./style/single - page.css">
     <link rel="stylesheet" href="./style/responsive.css">
 </head>
 <body>
@@ -29,7 +33,7 @@
                       <div class="collapse navbar-collapse flex-column" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-column">
                           <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
+                            <a class="nav-link active" aria-current="page" href="#home">
                                 <label for="homeRadio" id="homeLBL" class="row align-items-center">
                                     <div class="col-2"><img src="./img/Icons/fe_home.svg" class="check" alt="home"><img src="./img/Icons/home.svg" class="Uncheck" alt="home"></div>
                                     <div class="col-10">home</div>
@@ -37,7 +41,7 @@
                            </a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="#Library">
                                 <label for="libraryRadio" id="libraryLBL" class="row align-items-center">
                                     <div class="col-2"><img src="./img/Icons/icon-park-outline_folder-music-one.svg" class="check" alt="Music Library"><img src="./img/Icons/Music Library.svg" class="Uncheck" alt="Music Library"></div>
                                     <div class="col-10">Your Library</div>
@@ -45,7 +49,7 @@
                             </a>
                           </li>
                           <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="#LikedSongs">
                                 <label for="likedRadio" id="likedLBL" class="row align-items-center">
                                     <div class="col-2"><img src="./img/Icons/feather_headphones.svg" class="check" alt="Liked Songs"><img src="./img/Icons/feather_headphone.svg" class="Uncheck" alt="Liked Songs"></div>
                                     <div class="col-10">Liked Songs</div>
@@ -101,19 +105,22 @@
             <main class="col-lg-10">
                 <!-------- Start Main Header -------->
                 <div class="main-header row gap-2 justify-content-center align-items-center">
+                    <div class="col-md-1" >
+
+                    </div>
                     <div class="search-box col-md-6" >
                         <i class="bi bi-search"></i>
-                        <input type="text" id="searchInput" placeholder="Search" onkeyup="searchAjax(event)">
+                        <input type="text" id="searchInput" placeholder="Search Song Name , Artist Name ( Persian or English )" onkeyup="searchAjax(event)">
                     </div>
                     <button class="btn btn-primary btn-sm rounded-pill upgrade col-md-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">UPGRADE</button>
-                    <div class="account-section col-md-3 row align-items-center rounded-pill mx-1 gap-2 px-1" >
+                    <div class="account-section col-md-3 row align-items-center rounded-pill mx-1 gap-2 px-1 w-auto" >
                         <img src="./img/account.jpg" class="width-32 p-0 rounded-pill" alt="account">
                         <p class="w-auto my-0 p-0">MohamadReza Sadaty</p>
                         <i class="bi bi-chevron-down width-16 p-0"></i>
                     </div>
                 </div>
                 <!-------- End Main Header -------->
-                <div class="row px-2">
+                <div class="row px-2 position-relative">
                     <div id="homePage" class="col-sm-9">
                         <div class="row align-items-center my-3 px-2">
                             <div class="col-11"><h2 class="sliderTitle">Hot Today</h2></div>
@@ -126,23 +133,68 @@
                             <div class="col-1 text-nowrap"> <p class="seeAll">See All</p></div>
                         </div>
                         <div class="owl-carousel owl-carousel2 owl-theme d-flex flex-wrap"id="carousel2">
-                            <div class="item item-banner" style="background: linear-gradient(0deg, rgba(54, 54, 54, 0.75), rgba(54, 54, 54, 0.75)), url(&quot;./img/playList/cover01.png&quot;) 50% center no-repeat;">
-                                <img src="./img/playList/cover01.png">
-                                <div>
-                                        
-                                    <p class="songName">Laghzesh </p>
-                                    <p class="artistName">Ali Sorena</p>
-                                    <p class="bannerCaption">لغزش از آهنگ های زیبای مهراد هیدن ، سامان ویلسون است که طرفداران زیادی دارد این موزیک .</p>
+                        </div>
+                    </div>
+
+                    <div id="musicSinglePage" class="container position-absolute px-3 py-5 col-sm-12">
+                        <i class="bi bi-x position-absolute" id="closeBtn"></i>
+                        <div class="row py-2">
+                            <div class="col-lg-5 d-flex align-items-center flex-column">                            
+                                <div class="music-container" id="cover">
+                                    <div class="playBtn"><a href="#" onclick="playSong()" ><img src="./img/Icons/play Button - single page.png" width="100%" alt="play Button"></a></div>
+                                    <div class="music-info">
+                                        <div class="progress-container" id="progress-container">
+                                            <div class="progress" id="progress"></div>
+                                        </div>
+                                        <div class="row align-items-center gap-3 justify-content-between">
+                                            <img src="./img/Icons/shuffle.svg" class="width-16" alt="shuffle">
+                                            <img src="./img/Icons/play-prev.svg" class="width-32" id="prev" alt="prev">
+                                            <img src="./img/Icons/pause.svg" class="width-44" id="play" alt="PlayPause button" >
+                                            <img src="./img/Icons/play-next.svg" class="width-32"id="next" alt="next">
+                                            <img src="./img/Icons/repeat.svg" class="width-16" alt="repeat">
+                                        </div>
+                                    </div>
+                                </div>
+                                  <audio src="./Diagram-Musics/Ali Sorena - Laghzesh .mp3" id="audio"></audio>
+                                <div class="row py-2 w-75 justify-content-between" style="font-size: 14px;">
+                                    <div class="row col-6 flex-nowrap text-nowrap verified p-0">
+                                        <p class="p-0 w-auto">تکست تایید شده آرتیست</p>
+                                        <i class="bi bi-patch-check-fill"></i>
+                                    </div>
+                                    <div class="row col-5  flex-nowrap justify-content-end p-0  ">
+                                        <p class="p-0 w-auto overflow-hidden text-end " id="singerName"></p>
+                                        <i class="bi bi-person w-auto"></i>
+                                    </div>
+                                </div>
+                             </div>
+                            <div class="col-lg-6 music-caption-container px-5">
+                                <div class="row py-3 align-items-center">
+                                    <div class="col-6 text-end d-flex gap-1">
+                                            <i class="bi bi-folder"></i>
+                                            <span id="categoryName"></span>
+                                    </div>
+                                    <div class="col-6 text-start">
+                                        <label id="likeCheckBox" class="rounded-pill">
+                                            <span id="LikeNumber"></span>
+                                            <i class="bi bi-heart"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <h2 id="title"></h2>
+                                <p id="music-caption" class="py-2"></p>
+                                <h4>متن آهنگ</h4>
+                                <p id="music-text" class="py-2"></p>
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-6"><a href="" id="downloadMusic" download class="rounded-pill">دانلود آهنگ</a></div>
+                                    <div class="col-3 p-0"><a href="#" id="three-dots"><i class="bi bi-three-dots"></i></a>    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-
                     <div class="sideBar col-sm-3 py-3">
                         <h4>Random Musics</h4>
-                        <div class="hot-list">
-                        </div>
+                        <div class="hot-list"></div>
                     </div>
                 </div>
             </main>
@@ -157,6 +209,7 @@
     <script src="./script/importData-bannerSlider.js"></script>
     <script src="./script/importData-hotSlider.js"></script>
     <script src="./script/importData-hotList.js"></script>
+    <script src="./script/single - page .js"></script>
     <script src="./script/playMusic.js"></script>
     <script>
         jQuery('.owl-carousel1').owlCarousel({

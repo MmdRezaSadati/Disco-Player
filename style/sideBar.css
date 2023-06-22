@@ -1,0 +1,45 @@
+
+.sideBar{background-color: #2a2a2a;}
+.sideBar h4{color: #fff;}
+.hot-list{
+    display: flex;
+    flex-flow: column wrap-reverse;
+    align-items: center;
+    gap: 8px;
+}
+.hot-item{
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    align-items: center;
+    transition: .15s;
+    padding: 12px;
+    border-radius: 40px;
+    background-color: rgba(255,255,255,0.1);
+    width: 208px;
+    height: 66px;
+}
+.hot-item:hover{
+    background-color: rgba(255,255,255,0.15);
+}
+.hot-item .songName{
+    font-weight: 600;
+    font-size: 16px;
+}
+.hot-item p{
+    margin: 0;
+}
+.hot-item > div >div{
+    margin-top: 3px;
+    gap: 3px;
+    align-items: center;
+    display: flex;
+}
+.hot-item > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}

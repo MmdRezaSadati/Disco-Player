@@ -11,11 +11,9 @@ function PlayMusic(musicID){
     var musicPlay = dataMusics.findIndex(MyProduct=>{return MyProduct.id == musicID });
     MusiPlayer.src = "./Diagram-Musics/"+ dataMusics[musicPlay].musicSrc;
     flagMusic = false;
-    coverSong.style.background = "url(./img/playList/"+dataMusics[musicPlay].image+".png)no-repeat 50% 50% ";
-    
-    console.log(coverSong.style.background);
+    coverSong.style.background = "url(./img/playList/"+dataMusics[musicPlay].image+")no-repeat 50% 50% ";
+    coverSong.addEventListener("click",()=>{showSinglePage(musicID)});
     coverSong.style.backgroundSize = "cover";
-    console.log("Played : "+songName.innerHTML+"; By : "+artistName.innerHTML + " !");
     songName.innerHTML = dataMusics[musicPlay].title;
     artistName.innerHTML = dataMusics[musicPlay].artist;
 }

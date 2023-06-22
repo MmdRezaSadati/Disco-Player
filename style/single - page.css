@@ -1,0 +1,161 @@
+@font-face {
+    font-family: irsans;
+    src: url(../fonts/IRANSansWeb.ttf);
+}
+#musicSinglePage{
+    top: 0;
+    min-height: 134.5%;
+    left: 0;
+    display: none;
+    width: 100%;
+    background-color: rgba(54, 54, 54, 1);
+    z-index: 10;
+    color: #fff;
+    font-family: irsans;
+}
+#closeBtn{
+    font-size: 50px;
+    top: 5px;
+    left: 25px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50%;
+    transition: .15s;
+    background-color: transparent;
+    cursor: pointer;
+}
+#closeBtn:hover{
+    background-color: #ffffff1a;
+}
+.music-container {
+    transition: .3s;
+    position: relative;
+    background-size:cover ;
+    width: 339px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:  339px;
+}
+.img-container {
+    position: relative;
+    width: 100%;
+}
+.img-container img {
+    object-fit: cover;
+    width: inherit;
+}
+.playBtn a{
+    transition: .4s;
+    display: flex;
+    visibility: visible;
+    padding: 16px;
+    opacity: 1;
+    border-radius: 50%;
+    background: linear-gradient(120deg, #1ED760 0%, #14612F 100%);
+    width: 70px;
+    height: 70px;
+}
+.music-info{
+    transition: .4s;
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #072913a1 90.14%) ;
+    position: absolute;
+    display: flex;
+    padding: 10px 20px;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    bottom: -100px ;
+}
+.music-info h4 {
+    margin: 0;
+}
+.progress-container {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 6px;
+    width: 100%;
+}
+.progress {
+    background-color: #14612F;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+.music-container.played .playBtn{visibility: hidden !important;opacity: 0;}
+
+.music-container.played .music-info{bottom: 0px;}
+
+.verified i{
+    color: #2b91e3;
+    width: 30px;
+}
+.verified p{
+    padding: 0;
+    width: auto;
+}
+#singerName{
+    color: #9d9cf6;
+    cursor: pointer;
+}
+#singerName:hover{
+    text-decoration: underline;
+}
+.music-caption-container{
+    direction: rtl;
+}
+#likeCheckBox{
+    padding: 4px 16px ;
+    cursor: pointer;
+    background-color: #ffffff1a;
+}
+#categoryName{margin-top: -5px;}
+#music-caption{color: #eee;}
+.music-caption-container h4{
+    padding-top: 40px;
+}
+#music-text{color: #ddd;}
+#downloadMusic {
+    padding: 4px 16px;
+    border: 1px solid #5e5d5a;
+    padding: 6px 30px;
+    color: #a8aaab;
+    text-decoration: none;
+}
+#three-dots{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 150%;
+    line-height: 47px;
+    border-radius: 50%;
+    color: #fff;
+    background:  linear-gradient(120deg, #1ED760 0%, #14612F 100%);
+    cursor: pointer;
+    text-align: center;
+}
+.playBtn{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    transition: .3s;
+    height: 100%;
+    align-items: center;
+    background: #000000a0;
+}
+#play , #prev , #next{
+    cursor: pointer;
+}
+.music-info >  .row img{
+    cursor: no-drop;
+}

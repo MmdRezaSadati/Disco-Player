@@ -1,11 +1,11 @@
 function creatMusicBanner(jsonDataMusic){
     var banner = document.createElement("div");
+    banner.addEventListener("click",()=>{showSinglePage(jsonDataMusic.id)});
     banner.className ="item item-banner";
-    banner.addEventListener("click",()=>{PlayMusic(jsonDataMusic.id)})
     var divCaption = document.createElement("div");
 
         musicCover = document.createElement("img");
-        musicCover.src = "./img/playList/" + jsonDataMusic.image +".png";
+        musicCover.src = "./img/playList/" + jsonDataMusic.image;
         songName = document.createElement("p");
         songName.className = "songName";
         songName.innerHTML =  jsonDataMusic.title;
@@ -15,7 +15,7 @@ function creatMusicBanner(jsonDataMusic){
         bannerCaption = document.createElement("p");
         bannerCaption.className = "bannerCaption";
         bannerCaption.innerHTML =  jsonDataMusic.caption;
-    banner.style.background = "linear-gradient(0deg, rgba(54, 54, 54, 0.75), rgba(54, 54, 54, 0.75)),url(./img/playList/"+jsonDataMusic.image+".png)no-repeat 50%"
+    banner.style.background = "linear-gradient(0deg, rgba(54, 54, 54, 0.75), rgba(54, 54, 54, 0.75)),url(./img/playList/"+jsonDataMusic.image+")no-repeat 50%"
     banner.appendChild(musicCover);
     divCaption.appendChild(artistName);
     divCaption.appendChild(songName);
