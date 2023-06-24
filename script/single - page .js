@@ -13,6 +13,7 @@ const title = document.getElementById('title');
 const singerName = document.getElementById('singerName');
 const categoryName = document.getElementById('categoryName');
 const LikeNumber = document.getElementById('LikeNumber');
+const likeCheckBox = document.getElementById('likeCheckBox');
 const musicCaption = document.getElementById('music-caption');
 const musicText = document.getElementById('music-text');
 const downloadMusic = document.getElementById('downloadMusic');
@@ -21,20 +22,29 @@ var songIndex ;
 // Show
 function showSinglePage(musicID){
     musicSinglePage.style.display="block";
-    homePage.style.display="none";
-    sideBar.style.display="none";
     songIndex = dataMusics.findIndex(MyProduct=>{return MyProduct.id == musicID });
     loadSong(dataMusics[songIndex]);
+    PlayMusic(songIndex);
 }
 // hide
 function hideSinglePage(){
     musicSinglePage.style.display="none";
-    homePage.style.display="block";
-    sideBar.style.display="block";
 }
-// Initially load song details into DOM
 // Update song details
 function loadSong(song) {
+    // Liked Status 
+    if(song.likedStatus==true){
+        likeCheckBox.classList.add("liked-label");
+        let i =document.querySelector("#likeCheckBox > i");
+        i.className="bi bi-heart-fill";
+    }else if(song.likedStatus==false){
+        likeCheckBox.classList.remove("liked-label");
+        let i =document.querySelector("#likeCheckBox > i");
+        i.className="bi bi-heart";
+    }
+    // Update details
+    
+    likeCheckBox.setAttribute("data-id",song.id);
     title.innerHTML = song.persianTitile +" از " + song.persianNameArtist ;
     singerName.innerHTML = song.persianNameArtist;
     categoryName.innerHTML = song.category;
@@ -60,22 +70,20 @@ function pauseSong() {
 function prevSong() {
     songIndex--;
     if (songIndex < 0) {
-        songIndex = songs.length - 1;
+        songIndex = dataMusics.length - 1;
     }
     loadSong(dataMusics[songIndex]);
-
+    PlayMusic(songIndex);
     playSong();
 }
 // Next song
 function nextSong() {
     songIndex++;
-
     if (songIndex > dataMusics.length - 1) {
         songIndex = 0;
     }
-
     loadSong(dataMusics[songIndex]);
-
+    PlayMusic(songIndex);
     playSong();
 }
 // Update progress bar
@@ -102,7 +110,9 @@ playBtn.addEventListener('click', () => {
         musicContainer.classList.add("played");
     }
 });
-
+// Creat Local Storage For Favorite List Event 
+likeCheckBox.addEventListener('click', addToFavoriteList);
+// Hide Single Page
 closeBtn.addEventListener('click', hideSinglePage);
 // Change song
 prevBtn.addEventListener('click', prevSong);

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,108 +13,96 @@
     <link rel="stylesheet" href="./style/main - homePage.css">
     <link rel="stylesheet" href="./style/sideBar.css">
     <link rel="stylesheet" href="./style/single - page.css">
+    <link rel="stylesheet" href="./style/favorite Page.css">
     <link rel="stylesheet" href="./style/responsive.css">
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="row align-items-start">
-            
             <!-------- Start Header -------->
             <input type="radio" name="pagesLBL" id="homeRadio" checked>
-            <input type="radio" name="pagesLBL" id="libraryRadio" >
-            <input type="radio" name="pagesLBL" id="likedRadio" >
-            
+            <input type="radio" name="pagesLBL" id="likedRadio">
             <header class="col-lg-2 justify-content-center d-flex flex-column px-1">
                 <nav class="navbar navbar-expand-lg navbar-dark flex-column">
                     <div class="container flex-column px-1">
-                      <a class="navbar-brand" href="#"><img src="./img/Icons/Logo.svg" alt="Logo"></a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse flex-column" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-column">
-                          <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#home">
-                                <label for="homeRadio" id="homeLBL" class="row align-items-center">
-                                    <div class="col-2"><img src="./img/Icons/fe_home.svg" class="check" alt="home"><img src="./img/Icons/home.svg" class="Uncheck" alt="home"></div>
-                                    <div class="col-10">home</div>
-                                </label>
-                           </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#Library">
-                                <label for="libraryRadio" id="libraryLBL" class="row align-items-center">
-                                    <div class="col-2"><img src="./img/Icons/icon-park-outline_folder-music-one.svg" class="check" alt="Music Library"><img src="./img/Icons/Music Library.svg" class="Uncheck" alt="Music Library"></div>
-                                    <div class="col-10">Your Library</div>
-                                </label>
-                            </a>
-                          </li>
-                          <li class="nav-item dropdown">
-                            <a class="nav-link" href="#LikedSongs">
-                                <label for="likedRadio" id="likedLBL" class="row align-items-center">
-                                    <div class="col-2"><img src="./img/Icons/feather_headphones.svg" class="check" alt="Liked Songs"><img src="./img/Icons/feather_headphone.svg" class="Uncheck" alt="Liked Songs"></div>
-                                    <div class="col-10">Liked Songs</div>
-                                </label>
-                            </a>
-                          </li>
-                        </ul>
-                        
-                        <button class="btn btn-primary btn-sm  row rounded-pill w-100 creat-playList-btn my-1 mx-auto align-items-center gap-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                            <div class="col-1"><img src="./img/Icons/Creat PlayList.svg" width="28px" height="28px" alt="Creat PlayList"></div>
-                            <div class="col-9">Create Playlist</div>
+                        <a class="navbar-brand" href="#"><img src="./img/Icons/Logo.svg" alt="Logo"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
                         </button>
-                        <ul class="disco-menu">
-                            <li class="disco-menu-item align-items-center"> Your Top Song 2022</li>
-                            <li class="disco-menu-item">Cover Hits 2022</li>
-                            <li class="row disco-menu-item JazzVibes align-items-center gap-2">
-                                <div class="col-2"><img src="./img/Icons/icon-park-outline_headphone-sound.svg" width="20px" height="20px" alt="Jazz Vibes"></div>
-                                <div class="col-9">Jazz Vibes</div>
-                            </li>
-                            <li class="disco-menu-item">Anime Hits</li>
-                            <li class="disco-menu-item">Best Gaming Music</li>
-                            <li class="disco-menu-item">KPop: Girls!</li>
-                        </ul>
-
-                        <div id="musicPlayer">
-                            <div class="cover-song">
-                                <div class="button-handler row align-items-center flex-nowrap gap-2 justify-content-center px-2">
-                                    <audio src="#" id="MusiPlayer"></audio>
-                                    <img src="./img/Icons/shuffle.svg" class="width-16" alt="shuffle">
-                                    <img src="./img/Icons/play-prev.svg" class="width-32" alt="prev">
-                                    <img src="./img/Icons/play.svg" class="width-44" id="PlayPause" alt="PlayPause button" onclick="playButton()" >
-                                    <img src="./img/Icons/play-next.svg" class="width-32" alt="next">
-                                    <img src="./img/Icons/repeat.svg" class="width-16" alt="repeat">
+                        <div class="collapse navbar-collapse flex-column" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#home">
+                                        <label for="homeRadio" id="homeLBL" class="row align-items-center">
+                                            <div class="col-2"><img src="./img/Icons/fe_home.svg" class="check" alt="home"><img src="./img/Icons/home.svg" class="Uncheck" alt="home"></div>
+                                            <div class="col-10">home</div>
+                                        </label>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="#LikedSongs">
+                                        <label for="likedRadio" id="likedLBL" class="row align-items-center">
+                                            <div class="col-2"><img src="./img/Icons/feather_headphones.svg" class="check" alt="Liked Songs"><img src="./img/Icons/feather_headphone.svg" class="Uncheck" alt="Liked Songs"></div>
+                                            <div class="col-10">Favorite Songs</div>
+                                        </label>
+                                    </a>
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-sm  row rounded-pill w-100 creat-playList-btn my-1 mx-auto align-items-center gap-1"type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"a-expanded="false" aria-controls="collapseExample">
+                                <div class="col-1"><img src="./img/Icons/Creat PlayList.svg" width="28px" height="28px"alt="Creat PlayList"></div>
+                                <div class="col-9">Create Playlist</div>
+                            </button>
+                            <ul class="disco-menu">
+                                <li class="disco-menu-item align-items-center"> Your Top Song 2022</li>
+                                <li class="disco-menu-item">Cover Hits 2022</li>
+                                <li class="row disco-menu-item JazzVibes align-items-center gap-2">
+                                    <div class="col-2"><img src="./img/Icons/icon-park-outline_headphone-sound.svg"width="20px" height="20px" alt="Jazz Vibes"></div>
+                                    <div class="col-9">Jazz Vibes</div>
+                                </li>
+                                <li class="disco-menu-item">Anime Hits</li>
+                                <li class="disco-menu-item">Best Gaming Music</li>
+                                <li class="disco-menu-item">KPop: Girls!</li>
+                            </ul>
+                            <div id="musicPlayer">
+                                <div class="cover-song">
+                                    <div
+                                        class="button-handler row align-items-center flex-nowrap gap-2 justify-content-center px-2">
+                                        <audio src="#" id="MusiPlayer"></audio>
+                                        <img src="./img/Icons/shuffle.svg" class="width-16" alt="shuffle">
+                                        <img src="./img/Icons/play-prev.svg" class="width-32" alt="prev">
+                                        <img src="./img/Icons/play.svg" class="width-44" id="PlayPause"
+                                            alt="PlayPause button" onclick="playButton()">
+                                        <img src="./img/Icons/play-next.svg" class="width-32" alt="next">
+                                        <img src="./img/Icons/repeat.svg" class="width-16" alt="repeat">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row justify-content-between align-items-center py-2">
-                                <div class="col-8">
-                                    <p id="songName">songName</p>
-                                    <p id="artistName">artistName</p>
-                                </div>
-                                <div class="col-5 row align-items-center gap-2">
-                                    <img src="./img/Icons/AirPlay.svg" class="width-22"  alt="AirPlay">
-                                    <svg  class="width-22" id="likeBTN" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_d_54_104)"><path d="M17.3667 2.84166C16.941 2.41583 16.4357 2.07803 15.8795 1.84757C15.3232 1.6171 14.7271 1.49847 14.125 1.49847C13.5229 1.49847 12.9268 1.6171 12.3705 1.84757C11.8143 2.07803 11.309 2.41583 10.8833 2.84166L10 3.725L9.11666 2.84166C8.25692 1.98192 7.09086 1.49892 5.875 1.49892C4.65914 1.49892 3.49307 1.98192 2.63333 2.84166C1.77359 3.70141 1.29059 4.86747 1.29059 6.08333C1.29059 7.29919 1.77359 8.46525 2.63333 9.325L3.51666 10.2083L10 16.6917L16.4833 10.2083L17.3667 9.325C17.7925 8.89937 18.1303 8.39401 18.3608 7.83779C18.5912 7.28158 18.7099 6.6854 18.7099 6.08333C18.7099 5.48126 18.5912 4.88508 18.3608 4.32887C18.1303 3.77265 17.7925 3.26729 17.3667 2.84166V2.84166Z" stroke="#1BF869" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"/></g><defs><filter id="filter0_d_54_104" x="-3.20941" y="0.998474" width="26.4193" height="24.1932" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="4"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_54_104"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_54_104" result="shape"/></filter></defs></svg>
+                                <div class="row justify-content-between align-items-center py-2">
+                                    <div class="col-8">
+                                        <p id="songName">songName</p>
+                                        <p id="artistName">artistName</p>
+                                    </div>
+                                    <div class="col-5 row align-items-center gap-2"><img src="./img/Icons/AirPlay.svg" class="width-22" alt="AirPlay"></div>
                                 </div>
                             </div>
                         </div>
-                      </div>
                     </div>
-                  </nav>
+                </nav>
             </header>
             <!-------- End Header -------->
-
             <main class="col-lg-10">
                 <!-------- Start Main Header -------->
                 <div class="main-header row gap-2 justify-content-center align-items-center">
-                    <div class="col-md-1" >
-
+                    <div class="col-md-1">
                     </div>
-                    <div class="search-box col-md-6" >
+                    <div class="search-box col-md-6">
                         <i class="bi bi-search"></i>
-                        <input type="text" id="searchInput" placeholder="Search Song Name , Artist Name ( Persian or English )" onkeyup="searchAjax(event)">
+                        <input type="text" id="searchInput"
+                            placeholder="Search Song Name , Artist Name ( Persian or English )"
+                            onkeyup="searchAjax(event)">
                     </div>
-                    <button class="btn btn-primary btn-sm rounded-pill upgrade col-md-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">UPGRADE</button>
-                    <div class="account-section col-md-3 row align-items-center rounded-pill mx-1 gap-2 px-1 w-auto" >
+                    <button class="btn btn-primary btn-sm rounded-pill upgrade col-md-2" type="button"data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"aria-controls="collapseExample">UPGRADE</button>
+                    <div class="account-section col-md-3 row align-items-center rounded-pill mx-1 gap-2 px-1 w-auto">
                         <img src="./img/account.jpg" class="width-32 p-0 rounded-pill" alt="account">
                         <p class="w-auto my-0 p-0">MohamadReza Sadaty</p>
                         <i class="bi bi-chevron-down width-16 p-0"></i>
@@ -123,25 +112,34 @@
                 <div class="row px-2 position-relative">
                     <div id="homePage" class="col-sm-9">
                         <div class="row align-items-center my-3 px-2">
-                            <div class="col-11"><h2 class="sliderTitle">Hot Today</h2></div>
-                            <div class="col-1 text-nowrap"> <p class="seeAll">See All</p></div>
+                            <div class="col-11">
+                                <h2 class="sliderTitle">Hot Today</h2>
+                            </div>
+                            <div class="col-1 text-nowrap">
+                                <p class="seeAll">See All</p>
+                            </div>
                         </div>
-                        <div class="owl-carousel owl-carousel1 owl-theme d-flex flex-wrap"id="carousel">
+                        <div class="owl-carousel owl-carousel1 owl-theme d-flex flex-wrap" id="carousel">
                         </div>
                         <div class="row align-items-center my-3 px-2">
-                            <div class="col-11"><h2 class="sliderTitle">Enjoy Your Day</h2></div>
-                            <div class="col-1 text-nowrap"> <p class="seeAll">See All</p></div>
+                            <div class="col-11">
+                                <h2 class="sliderTitle">Enjoy Your Day</h2>
+                            </div>
+                            <div class="col-1 text-nowrap">
+                                <p class="seeAll">See All</p>
+                            </div>
                         </div>
-                        <div class="owl-carousel owl-carousel2 owl-theme d-flex flex-wrap"id="carousel2">
+                        <div class="owl-carousel owl-carousel2 owl-theme d-flex flex-wrap" id="carousel2">
                         </div>
                     </div>
-
                     <div id="musicSinglePage" class="container position-absolute px-3 py-5 col-sm-12">
                         <i class="bi bi-x position-absolute" id="closeBtn"></i>
                         <div class="row py-2">
-                            <div class="col-lg-5 d-flex align-items-center flex-column">                            
+                            <div class="col-lg-5 d-flex align-items-center flex-column">
                                 <div class="music-container" id="cover">
-                                    <div class="playBtn"><a href="#" onclick="playSong()" ><img src="./img/Icons/play Button - single page.png" width="100%" alt="play Button"></a></div>
+                                    <div class="playBtn"><a href="#" onclick="playSong()"><img
+                                                src="./img/Icons/play Button - single page.png" width="100%"
+                                                alt="play Button"></a></div>
                                     <div class="music-info">
                                         <div class="progress-container" id="progress-container">
                                             <div class="progress" id="progress"></div>
@@ -149,13 +147,14 @@
                                         <div class="row align-items-center gap-3 justify-content-between">
                                             <img src="./img/Icons/shuffle.svg" class="width-16" alt="shuffle">
                                             <img src="./img/Icons/play-prev.svg" class="width-32" id="prev" alt="prev">
-                                            <img src="./img/Icons/pause.svg" class="width-44" id="play" alt="PlayPause button" >
-                                            <img src="./img/Icons/play-next.svg" class="width-32"id="next" alt="next">
+                                            <img src="./img/Icons/pause.svg" class="width-44" id="play"
+                                                alt="PlayPause button">
+                                            <img src="./img/Icons/play-next.svg" class="width-32" id="next" alt="next">
                                             <img src="./img/Icons/repeat.svg" class="width-16" alt="repeat">
                                         </div>
                                     </div>
                                 </div>
-                                  <audio src="./Diagram-Musics/Ali Sorena - Laghzesh .mp3" id="audio"></audio>
+                                <audio src="./Diagram-Musics/Ali Sorena - Laghzesh .mp3" id="audio"></audio>
                                 <div class="row py-2 w-75 justify-content-between" style="font-size: 14px;">
                                     <div class="row col-6 flex-nowrap text-nowrap verified p-0">
                                         <p class="p-0 w-auto">تکست تایید شده آرتیست</p>
@@ -166,15 +165,15 @@
                                         <i class="bi bi-person w-auto"></i>
                                     </div>
                                 </div>
-                             </div>
+                            </div>
                             <div class="col-lg-6 music-caption-container px-5">
                                 <div class="row py-3 align-items-center">
                                     <div class="col-6 text-end d-flex gap-1">
-                                            <i class="bi bi-folder"></i>
-                                            <span id="categoryName"></span>
+                                        <i class="bi bi-folder"></i>
+                                        <span id="categoryName"></span>
                                     </div>
                                     <div class="col-6 text-start">
-                                        <label id="likeCheckBox" class="rounded-pill">
+                                        <label id="likeCheckBox" class="rounded-pill" >
                                             <span id="LikeNumber"></span>
                                             <i class="bi bi-heart"></i>
                                         </label>
@@ -186,15 +185,19 @@
                                 <p id="music-text" class="py-2"></p>
                                 <div class="row align-items-center justify-content-center">
                                     <div class="col-6"><a href="" id="downloadMusic" download class="rounded-pill">دانلود آهنگ</a></div>
-                                    <div class="col-3 p-0"><a href="#" id="three-dots"><i class="bi bi-three-dots"></i></a>    </div>
+                                    <div class="col-3 p-0"><a href="#" id="three-dots"><i class="bi bi-three-dots"></i></a> </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="sideBar col-sm-3 py-3">
                         <h4>Random Musics</h4>
                         <div class="hot-list"></div>
+                    </div>
+                    <div id="favoritePage" class="col-12 py-3 position-absolute container">
+                        <h2>Favorite Musics</h2>
+                        <div class="row">
+                        </div>
                     </div>
                 </div>
             </main>
@@ -209,61 +212,64 @@
     <script src="./script/importData-bannerSlider.js"></script>
     <script src="./script/importData-hotSlider.js"></script>
     <script src="./script/importData-hotList.js"></script>
+    <script src="./script/add favorite song.js"></script>
     <script src="./script/single - page .js"></script>
+    <script src="./script/favorite-list.js"></script>
     <script src="./script/playMusic.js"></script>
     <script>
         jQuery('.owl-carousel1').owlCarousel({
-            ltr:true,
-            loop:true,
-            margin:190,
-            autoplay:true,
-            autoplayTimeout:3000,
-            autoplayHoverPause:true,
-            nav:false,
-            responsive:{
-                360:{
-                    items:3,
-                    margin:210
+            ltr: true,
+            loop: true,
+            margin: 190,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            nav: false,
+            responsive: {
+                360: {
+                    items: 3,
+                    margin: 210
                 },
-                800:{
-                    items:3,
-                    margin:20
+                800: {
+                    items: 3,
+                    margin: 20
                 },
-                1000:{
-                    items:4
+                1000: {
+                    items: 4
                 }
             }
         })
         jQuery('.owl-carousel2').owlCarousel({
-            ltr:true,
-            loop:true,
-            margin:280,
-            autoplay:true,
-            autoplayTimeout:5000,
-            autoplayHoverPause:true,
-            nav:false,
-            responsive:{
-                360:{
-                    items:1,
-                    margin:180
+            ltr: true,
+            loop: true,
+            margin: 280,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            nav: false,
+            responsive: {
+                360: {
+                    items: 1,
+                    margin: 180
                 },
-                800:{
-                    items:1,
-                    margin:20
+                800: {
+                    items: 1,
+                    margin: 20
                 },
-                1000:{
-                    margin:380,
-                    items:2
+                1000: {
+                    margin: 380,
+                    items: 2
                 },
-                1150:{
-                    margin:380,
-                    items:2
+                1150: {
+                    margin: 380,
+                    items: 2
                 },
-                1210:{
-                    items:2
+                1210: {
+                    items: 2
                 }
             }
         })
     </script>
 </body>
+
 </html>

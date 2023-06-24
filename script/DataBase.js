@@ -219,6 +219,7 @@ var dataMusics= [
         artist:["Shayea " , " Tara Salehi"],
         persianNameArtist:["شایع "," تارا صالحی " ],
         likes:294,
+        likedStatus:false,
         category:"رپ",
         musicSrc :"Shayea - Yeja Yeho Bar Mikhore Behet (FT. Tara Salahi).mp3",
         musicText:""

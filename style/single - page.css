@@ -117,6 +117,7 @@
 #likeCheckBox{
     padding: 4px 16px ;
     cursor: pointer;
+    line-height: 1px;
     background-color: #ffffff1a;
 }
 #categoryName{margin-top: -5px;}
@@ -158,4 +159,7 @@
 }
 .music-info >  .row img{
     cursor: no-drop;
+}
+.liked-label{
+    background-color: red !important;
 }

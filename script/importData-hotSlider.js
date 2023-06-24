@@ -15,6 +15,12 @@ function creatMusics(jsonDataMusic){
     music.appendChild(musicCover);
     music.appendChild(songName);
     music.appendChild(artistName);
+    if(jsonDataMusic.likedStatus==true){
+        let i = document.createElement("i")
+        i.className="bi bi-heart-fill";
+        music.classList.add("liked-item");
+        music.appendChild(i);
+    }
     return music;
 }
 linkMusic(dataMusics);

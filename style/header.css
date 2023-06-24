@@ -21,10 +21,10 @@ header >img{
 header  label > div {cursor: pointer;}
 header .collapse .navbar-nav .nav-item a{padding: 3px 0;}
 #homeRadio , #libraryRadio ,#likedRadio{display: none;}
-#homeRadio:checked ~ header label#homeLBL img.check{
+#homeRadio:checked ~ header label#homeLBL img.check ,#likedRadio:checked ~ main .sideBar,#likedRadio:checked ~ main #homePage{
     display: block;
 }
-#homeRadio:checked ~ header label#homeLBL img.Uncheck{
+#homeRadio:checked ~ header label#homeLBL img.Uncheck , #likedRadio:checked ~ main #musicSinglePage, #likedRadio:checked ~ main #favoritePage{
     display: none;
 }
 #libraryRadio:checked ~ header label#libraryLBL img.check{
@@ -33,11 +33,11 @@ header .collapse .navbar-nav .nav-item a{padding: 3px 0;}
 #libraryRadio:checked ~ header label#libraryLBL img.Uncheck{
     display: none;
 }
-#likedRadio:checked ~ header label#likedLBL img.check{
-    display: block;
+#likedRadio:checked ~ header label#likedLBL img.check ,#likedRadio:checked ~ main #favoritePage {
+    display: block !important;
 }
-#likedRadio:checked ~ header label#likedLBL img.Uncheck{
-    display: none;
+#likedRadio:checked ~ header label#likedLBL img.Uncheck,#likedRadio:checked ~ main  .sideBar , #likedRadio:checked ~ main #homePage , #likedRadio:checked ~ main #musicSinglePage{
+    display: none ;
 }
 .creat-playList-btn{
     background: linear-gradient(180deg, #1ED760 0%, #14612F 100%);

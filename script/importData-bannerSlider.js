@@ -28,6 +28,7 @@ function linkMusicBanner(Data){
     sliderElement.innerHTML = "";
     Data.map((music)=>{
         let Music = creatMusicBanner(music);
+        // console.log(Music);
         sliderElement.appendChild(Music);
     })
 }
