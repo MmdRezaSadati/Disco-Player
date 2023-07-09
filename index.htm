@@ -27,9 +27,6 @@
                 <nav class="navbar navbar-expand-lg navbar-dark flex-column">
                     <div class="container flex-column px-1">
                         <a class="navbar-brand" href="#"><img src="./img/Icons/Logo.svg" alt="Logo"></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
                         <div class="collapse navbar-collapse flex-column" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-column">
                                 <li class="nav-item">
@@ -92,7 +89,7 @@
             <!-------- End Header -------->
             <main class="col-lg-10">
                 <!-------- Start Main Header -------->
-                <div class="main-header row gap-2 justify-content-center align-items-center">
+                <div class="main-header row gap-1 justify-content-center align-items-center flex-nowrap">
                     <div class="col-md-1">
                     </div>
                     <div class="search-box col-md-6">
@@ -101,21 +98,25 @@
                             placeholder="Search Song Name , Artist Name ( Persian or English )"
                             onkeyup="searchAjax(event)">
                     </div>
-                    <button class="btn btn-primary btn-sm rounded-pill upgrade col-md-2" type="button"data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"aria-controls="collapseExample">UPGRADE</button>
-                    <div class="account-section col-md-3 row align-items-center rounded-pill mx-1 gap-2 px-1 w-auto">
-                        <img src="./img/account.jpg" class="width-32 p-0 rounded-pill" alt="account">
-                        <p class="w-auto my-0 p-0">MohamadReza Sadaty</p>
-                        <i class="bi bi-chevron-down width-16 p-0"></i>
+                    <div class="col-md-5">
+                        <div class="row justify-content-center gap-2">
+                            <button class="btn btn-primary btn-sm rounded-pill upgrade col-5" type="button"data-bs-toggle="collapse2" data-bs-target="#collapseExample" aria-expanded="false"aria-controls="collapseExample">UPGRADE</button>
+                            <div class="account-section col-6 row align-items-center rounded-pill mx-1 gap-2 px-1 flex-nowrap justify-content-between px-2">
+                                <img src="./img/account.jpg" class="width-32 p-0 rounded-pill" alt="account">
+                                <p class=" my-0 col-7 overflow-hidden p-0 text-nowrap">MohamadReza Sadaty</p>
+                                <i class="bi bi-chevron-down width-16 p-0 "></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-------- End Main Header -------->
                 <div class="row px-2 position-relative">
-                    <div id="homePage" class="col-sm-9">
+                    <div id="homePage" class="col-md-9">
                         <div class="row align-items-center my-3 px-2">
                             <div class="col-11">
                                 <h2 class="sliderTitle">Hot Today</h2>
                             </div>
-                            <div class="col-1 text-nowrap">
+                            <div class="col-1 text-nowrap p-0">
                                 <p class="seeAll">See All</p>
                             </div>
                         </div>
@@ -125,7 +126,7 @@
                             <div class="col-11">
                                 <h2 class="sliderTitle">Enjoy Your Day</h2>
                             </div>
-                            <div class="col-1 text-nowrap">
+                            <div class="col-1 text-nowrap p-0">
                                 <p class="seeAll">See All</p>
                             </div>
                         </div>
@@ -190,7 +191,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sideBar col-sm-3 py-3">
+                    <div class="sideBar col-md-3 py-3 overflow-hidden">
                         <h4>Random Musics</h4>
                         <div class="hot-list"></div>
                     </div>
@@ -212,10 +213,10 @@
     <script src="./script/importData-bannerSlider.js"></script>
     <script src="./script/importData-hotSlider.js"></script>
     <script src="./script/importData-hotList.js"></script>
-    <script src="./script/add favorite song.js"></script>
     <script src="./script/single - page .js"></script>
-    <script src="./script/favorite-list.js"></script>
     <script src="./script/playMusic.js"></script>
+    <script src="./script/addTo Favorite.js"></script>
+    <script src="./script/favorite list .js"></script>
     <script>
         jQuery('.owl-carousel1').owlCarousel({
             ltr: true,
@@ -230,9 +231,17 @@
                     items: 3,
                     margin: 210
                 },
-                800: {
+                600: {
                     items: 3,
-                    margin: 20
+                    margin: 150
+                },
+                800: {
+                    items: 4,
+                    margin: 250
+                },
+                900: {
+                    margin: 210,
+                    items: 4
                 },
                 1000: {
                     items: 4
