@@ -18,53 +18,59 @@ const musicCaption = document.getElementById('music-caption');
 const musicText = document.getElementById('music-text');
 const downloadMusic = document.getElementById('downloadMusic');
 const cover = document.getElementById('cover');
-var songIndex ;
+var songIndex;
 // Show
-function showSinglePage(musicID){
-    musicSinglePage.style.display="block";
-    songIndex = dataMusics.findIndex(MyProduct=>{return MyProduct.id == musicID });
+function showSinglePage(musicID) {
+    musicSinglePage.style.display = "block";
+    // homePage.style.display ="none";
+    songIndex = dataMusics.findIndex(MyMusic => { return MyMusic.id == musicID });
+    likeCheckBox.setAttribute("data-id",musicID);
+    likeCheckBox.addEventListener("click",addToFavoriteList);
     loadSong(dataMusics[songIndex]);
     PlayMusic(songIndex);
 }
 // hide
-function hideSinglePage(){
-    musicSinglePage.style.display="none";
+function hideSinglePage() {
+    // homePage.style.display = "block";
+    musicSinglePage.style.display = "none";
 }
 // Update song details
 function loadSong(song) {
+    
     // Liked Status 
-    if(song.likedStatus==true){
+    if (song.likedStatus == true) {
         likeCheckBox.classList.add("liked-label");
-        let i =document.querySelector("#likeCheckBox > i");
-        i.className="bi bi-heart-fill";
-    }else if(song.likedStatus==false){
+        let i = document.querySelector("#likeCheckBox > i");
+        i.className = "bi bi-heart-fill";
+    } else if (song.likedStatus == false) {
         likeCheckBox.classList.remove("liked-label");
-        let i =document.querySelector("#likeCheckBox > i");
-        i.className="bi bi-heart";
+        let i = document.querySelector("#likeCheckBox > i");
+        i.className = "bi bi-heart";
     }
     // Update details
-    
-    likeCheckBox.setAttribute("data-id",song.id);
-    title.innerHTML = song.persianTitile +" از " + song.persianNameArtist ;
+    likeCheckBox.setAttribute("data-id", song.id);
+    title.innerHTML = song.persianTitile + " از " + song.persianNameArtist;
     singerName.innerHTML = song.persianNameArtist;
     categoryName.innerHTML = song.category;
     LikeNumber.innerHTML = song.likes;
     musicCaption.innerHTML = song.caption;
     musicText.innerHTML = song.musicText;
-    downloadMusic.href = "Diagram-Musics/"+song.musicSrc;
-    audio.src = "Diagram-Musics/"+song.musicSrc;
-    cover.style.background = "url('img/playList/"+song.image+"'";
+    downloadMusic.href = "Diagram-Musics/" + song.musicSrc;
+    audio.src = "Diagram-Musics/" + song.musicSrc;
+    cover.style.background = "url('img/playList/" + song.image + "'";
     cover.style.backgroundSize = "cover";
 }
 // Play song
 function playSong() {
     musicContainer.classList.add("played");
+    PlayPause.src ="./img/Icons/pause.svg";
     audio.play();
 }
 // Pause song
 function pauseSong() {
     musicContainer.classList.remove("played");
     audio.pause();
+    PlayPause.src ="./img/Icons/play.svg";
 }
 // Previous song
 function prevSong() {
@@ -102,16 +108,14 @@ function setProgress(e) {
 }
 // Event listeners
 playBtn.addEventListener('click', () => {
-    if(musicContainer.className == "music-container played") {
+    if (musicContainer.className == "music-container played") {
         pauseSong();
         musicContainer.classList.remove("played");
-    }else if(musicContainer.className != "music-container played") {
+    } else if (musicContainer.className != "music-container played") {
         playSong();
         musicContainer.classList.add("played");
     }
 });
-// Creat Local Storage For Favorite List Event 
-likeCheckBox.addEventListener('click', addToFavoriteList);
 // Hide Single Page
 closeBtn.addEventListener('click', hideSinglePage);
 // Change song

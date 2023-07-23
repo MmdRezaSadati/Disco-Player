@@ -1,7 +1,29 @@
 
-@media (max-width:992px){
+@media (max-width:1100px){
+    .hot-item{
+        width: 190px;
+    }
+    main .navbar-collapse{display: none;}
 }
-@media (max-width:768px){
+@media (max-width:992px){
+    .hot-item{
+        width: 180px;
+    }
+}
+@media (max-width:810px){
+    .main-header{
+        flex-wrap: wrap !important;
+    }
+}
+@media (max-width:767px){
+    .hot-item{
+        width: 75%;
+        height: 80px;
+    }
+    .hot-item .songName{font-size: 21px;}
+    .hot-item .artistName{
+        font-size: 18px;
+    }
 }
 @media (max-width:577px){
 }

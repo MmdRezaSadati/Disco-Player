@@ -42,6 +42,7 @@
     font-size: 16px;
     cursor: pointer;
 }
+.seeAll:hover{text-decoration: underline;}
 .item-music{
     display: flex;
     flex-direction: column;
@@ -110,13 +111,17 @@
     background-blend-mode: luminosity, normal;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(40.7742px);
-    flex-direction: row;
+    flex-flow: row;
     align-items: center;
     padding: 8px;
     gap: 24px;
     background-size: 110% !important;
-    width: 504px;
+    width: 504px ;
     height: 199px;
+}
+.owl-carousel1 .owl-stage{
+    height: 350px;
+    overflow: hidden;
 }
 .bannerCaption{
     font-weight: 400;
